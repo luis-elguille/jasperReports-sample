@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-05-01T17:29:16 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="salesTemplate" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2cf5de31-84ba-470c-b131-18f8e7a03e56">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL Sales"/>
+	<queryString>
+		<![CDATA[SELECT * FROM sales.product]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reference" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stock" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="state" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="800" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="80" y="150" width="400" height="400" uuid="01992c9d-fc7c-4091-8cea-d8d6f0c82de8">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/reports/templates/watermark.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="72">
+			<image>
+				<reportElement x="0" y="0" width="200" height="72" uuid="ae427f8e-b18b-4239-8992-1ed39252a948"/>
+				<imageExpression><![CDATA["C:/reports/templates/jaspersoft.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="160" y="0" width="320" height="60" forecolor="#0000FF" uuid="e240b7e9-c6ce-4f3f-833a-38a4eebf6634"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Sales]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="50">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="138" height="50" backcolor="#FFFF99" uuid="20add1c3-aace-4ca2-b8d6-810dc2470cb5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="138" y="0" width="138" height="50" backcolor="#FFFF99" uuid="b3c5da6e-e644-4138-adea-aab9bc59ea5c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[reference]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="0" width="138" height="50" backcolor="#FFFF99" uuid="9a621680-be2c-4e56-a0ac-bfe7a5f51d1d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[stock]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="414" y="0" width="138" height="50" backcolor="#FFFF99" uuid="af437905-de79-4e9e-9b2e-1b7b942b1dc4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[state]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement mode="Transparent" x="0" y="0" width="138" height="30" forecolor="#050505" uuid="9995b4ea-b854-49e0-9d79-676c8c94c156"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="138" y="0" width="138" height="30" forecolor="#050505" uuid="5904e13c-8dbd-48e6-84c8-c1e8cde276e8"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="276" y="0" width="138" height="30" forecolor="#050505" uuid="83615545-a67c-479d-8c83-3868fbfe7038"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="414" y="0" width="138" height="30" forecolor="#050505" uuid="2b5f264b-c92f-4eb0-8b47-bef74208c236"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{state}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="554" height="1" uuid="c6b3d8ab-ee6d-4eb6-a57f-e4e915763e8e">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="0" width="100" height="30" uuid="d14431cd-0b3b-45b7-8558-3e7584e30323"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

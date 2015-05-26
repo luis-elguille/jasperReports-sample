@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-04-29T14:52:23 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sales" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="131fc4b3-0553-41de-99f0-f311fb20b85b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL Sales"/>
+	<queryString>
+		<![CDATA[SELECT * FROM sales.product]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reference" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stock" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="state" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="13" width="290" height="30" uuid="4be7c900-f89a-498a-afce-60f555c5265e"/>
+				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-11" y="10" width="61" height="30" uuid="239964a2-c39f-4c38-a899-5c4e5d2799b2"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="13" width="100" height="30" uuid="78d2a6bb-c7da-4bea-846d-72cbb0772d85"/>
+				<textFieldExpression><![CDATA[$F{state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="13" width="100" height="30" uuid="feca9d14-9acb-4fb2-8ede-aa990f30c090"/>
+				<textFieldExpression><![CDATA[$F{stock}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

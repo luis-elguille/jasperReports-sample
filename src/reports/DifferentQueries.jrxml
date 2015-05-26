@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-04-05T10:04:36 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DifferentQueries" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8f35f239-7eb5-4812-b3f5-242723e69492">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DifferentQueries"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="amount" class="java.lang.Long">
+		<fieldDescription><![CDATA[amount]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[quantity]]></fieldDescription>
+	</field>
+	<field name="date" class="java.util.Date">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="reference" class="java.lang.String">
+		<fieldDescription><![CDATA[reference]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="10" width="190" height="30" uuid="b68b7a44-b25b-46b3-98b2-f49e0d6e61c4"/>
+				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="10" width="100" height="30" uuid="7e21a9c2-bf79-4a62-a9a2-f31fb3d9f59f"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="9" width="100" height="32" uuid="d3b62f0d-5d85-40ff-a2ba-f455f1ccc1fb"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="10" width="100" height="30" uuid="134f0363-fa67-4bc1-b358-3570fcae29eb"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

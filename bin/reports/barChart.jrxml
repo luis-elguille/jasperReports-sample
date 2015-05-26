@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2015-05-25T08:18:52 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="barChartjrxml" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="510f1f1e-1189-430d-818f-7ea727fea35c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sales"/>
+	<queryString>
+		<![CDATA[SELECT		SUM( salexproduct.amount ) AMOUNT,
+					product.reference
+
+FROM		salexproduct ,
+				product
+WHERE	salexproduct.product_id = product.id
+GROUP BY product.reference]]>
+	</queryString>
+	<field name="AMOUNT" class="java.math.BigDecimal"/>
+	<field name="reference" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<summary>
+		<band height="299" splitType="Stretch">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="40" y="0" width="460" height="260" uuid="27700502-d8f5-449b-9158-10bf9fa26834"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{reference}]]></seriesExpression>
+						<categoryExpression><![CDATA[0]]></categoryExpression>
+						<valueExpression><![CDATA[$F{AMOUNT}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

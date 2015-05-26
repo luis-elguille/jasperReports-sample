@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-05-03T13:37:09 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="salesParameterized" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="22c4fcff-8f7d-4807-bc44-39aa5c77573b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL Sales"/>
+	<parameter name="prtId" class="java.lang.Integer">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sales.product WHERE product.id = $P{prtId}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reference" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stock" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="state" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="0" width="70" height="30" uuid="01025d5b-4fd1-40b4-b800-51311e2222d5"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="100" height="30" uuid="15846147-d302-4876-bca4-d7b00d8cbdc3"/>
+				<textFieldExpression><![CDATA[$F{stock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="100" height="30" uuid="1ab68b48-c952-4353-b4a4-eeffdd70f7e4"/>
+				<textFieldExpression><![CDATA[$F{state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="300" height="30" uuid="76df3215-f739-462e-bf0f-ff1a4dee74bb"/>
+				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
