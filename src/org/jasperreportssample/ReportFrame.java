@@ -94,7 +94,7 @@ public class ReportFrame extends JFrame
 		comboBox.addItem( "Reporte creado con Collecion de JavaBeans" );
 		comboBox.addItem( "Reporte creado con Diferentes Queries" );
 		comboBox.setBounds(130, 29, 292, 34);
-		comboBox.addActionListener( controller );
+		comboBox.addActionListener( controller::eventInComboBox );
 		controlsPanel.add(comboBox);
 		
 		lblMes = new JLabel();
@@ -136,27 +136,27 @@ public class ReportFrame extends JFrame
 		
 		btnOpen = new JButton("Open");
 		btnOpen.setBounds(54, 11, 110, 46);
-		btnOpen.addActionListener( controller );
+		btnOpen.addActionListener( controller::eventInBtnOpen );
 		buttonsPanel.add(btnOpen);
 								
 		btnEmbedded = new JButton("Embedded");
 		btnEmbedded.setBounds(54, 72, 110, 46);
-		btnEmbedded.addActionListener( controller );
+		btnEmbedded.addActionListener( controller::eventInBtnEmbedded );
 		buttonsPanel.add(btnEmbedded);
 								
 		btnExportToPDF = new JButton("Exportar PDF");
 		btnExportToPDF.setBounds(54, 140, 110, 46);
-		btnExportToPDF.addActionListener( controller );
+		btnExportToPDF.addActionListener( controller::eventInBtnExportToPDF );
 		buttonsPanel.add(btnExportToPDF);
 								
 		btnExportExcel = new JButton("Export Excel");
 		btnExportExcel.setBounds(54, 206, 110, 46);
-		btnExportExcel.addActionListener( controller );
+		btnExportExcel.addActionListener( controller::eventInBtnExportExcel );
 		buttonsPanel.add(btnExportExcel);
 										
 		btnExportHtml = new JButton("Export HTML");
 		btnExportHtml.setBounds(54, 272, 110, 46);
-		btnExportHtml.addActionListener( controller );
+		btnExportHtml.addActionListener( controller::eventInBtnExportHtml );
 		buttonsPanel.add(btnExportHtml);
 		
 		setVisible( true );

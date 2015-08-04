@@ -1,8 +1,8 @@
-Identificacion_inventario,Nombre,Descripcion,Precio_unidad,Cantidad_existencias,Periodo_pedido,Cantidad_pedido,Fuera_existencia
-1,Pantalones,,3200,75,,,no
-2,Tennis,,5600,16,,,no
-3,Zapatillas,,1400,18,,,si
-4,Chancletas,,1000,32,,,no
-5,Camisas,,7200,19,,,no
-6,T-Shirt,,4100,42,,,si
-7,Medias,,700,10,,,no
+Identificacion_inventario,Nombre,Precio_unidad,Cantidad_existencias,Fuera_existencia
+1,Pantalones,3200,75,no
+2,Tennis,5600,16,no
+3,Zapatillas,1400,18,si
+4,Chancletas,1000,32,no
+5,Camisas,7200,19,no
+6,T-Shirt,4100,42,si
+7,Medias,700,10,no
